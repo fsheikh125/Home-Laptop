@@ -8,7 +8,16 @@ Scenario Outline: Search a Product
 	Given The user navigates to home page
 	When The user searches for <product>
 	Then The user should be able to see all results with <product> 
-	Examples: 
-	| product              |
-	| Printed Summer Dress |
+	Examples:
+		| product              |
+		| Printed Summer Dress |
 	
+
+	
+		
+
+
+	   
+	      
+
+       
