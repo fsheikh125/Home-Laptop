@@ -1,0 +1,1 @@
+nunit3-console SpecFlowTraining.csproj --where "cat==sprint1 and cat !=defect876"

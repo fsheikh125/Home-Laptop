@@ -1,0 +1,1 @@
+<Playlist Version="1.0"><Add Test="SpecFlowTraining.Features.Ex01_LoginFeature.LoginWithInvalidCredentials" /><Add Test="SpecFlowTraining.Features.Ex01_LoginFeature.LoginWithValidCredentials" /></Playlist>

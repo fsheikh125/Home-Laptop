@@ -1,0 +1,20 @@
+NUnit Console Runner 3.10.0 (.NET 2.0)
+Copyright (c) 2019 Charlie Poole, Rob Prouse
+03 May 2020 16:42:59
+
+Runtime Environment
+   OS Version: Microsoft Windows NT 10.0.18362.0
+  CLR Version: 4.0.30319.42000
+
+Test Files
+    SpecFlowTraining.csproj
+
+SpecFlowTraining.Features.Ex01_LoginFeature.LoginWithInvalidCredentials
+SpecFlowTraining.Features.Ex01_LoginFeature.LoginWithValidCredentials
+SpecFlowTraining.Features.Ex02_MoreStepsFeature.PractisingMoreStepsDiffrentVariety
+SpecFlowTraining.Features.Ex03_BackgroundFeature.PaymentWithCheque
+SpecFlowTraining.Features.Ex03_BackgroundFeature.PaymentWithCreditCard
+SpecFlowTraining.Features.Ex03_BackgroundFeature.PaymentWithDebitCard
+SpecFlowTraining.Features.Ex04_DataDrivenFeature.AddTwoNumbersDataDriven("5","2","7",null)
+SpecFlowTraining.Features.Ex04_DataDrivenFeature.AddTwoNumbersDataDriven("3","4","7",null)
+SpecFlowTraining.Features.Ex04_DataDrivenFeature.AddTwoNumbersDataDriven("4","1","100",null)
