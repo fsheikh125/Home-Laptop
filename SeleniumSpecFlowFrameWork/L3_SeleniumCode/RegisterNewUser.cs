@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumSpecFlowFrameWork.Global;
+using SeleniumSpecFlowFrameWork.L2_StepDefinitions.Hooks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,20 +24,18 @@ namespace SeleniumSpecFlowFrameWork.L3_SeleniumCode
             this.sso = _sso;
         }
 
-        public void RegisterAccount(string emailadd, string newdomain)
+        public void RegisterAccount(string emailadd)
         {
-            Random random = new Random();
-            string randomNumber = random.Next(1, 999).ToString();
-
-            sso.driver.FindElement(RegEmail_txt).SendKeys(emailadd + randomNumber + newdomain );
+  
+            sso.driver.FindElement(RegEmail_txt).SendKeys(emailadd );
             sso.driver.FindElement(RegSubmit_btn).Click();
         }
 
         public void FillAccountDetails()
         {
             sso.driver.FindElement(By.XPath("//input[@name='id_gender']")).Click();
-            sso.driver.FindElement(By.Id("customer_firstname")).SendKeys("Faizan");
-            sso.driver.FindElement(By.Id("customer_lastname")).SendKeys("Sheikh");
+            sso.driver.FindElement(By.Id("customer_firstname")).SendKeys(DataHooks.UserData["fname"]);
+            sso.driver.FindElement(By.Id("customer_lastname")).SendKeys(DataHooks.UserData["lname"]);
 
 
             sso.driver.FindElement(By.Id("passwd")).SendKeys("Test1234");
@@ -77,6 +76,8 @@ namespace SeleniumSpecFlowFrameWork.L3_SeleniumCode
         {
             var homeIcon = sso.driver.FindElement(homeIcon_logo).Displayed;
             return homeIcon;
+//this is test branch
+//changes for faisal
         }
 
     }

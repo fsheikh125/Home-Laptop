@@ -3,5 +3,3 @@ username = faizan125@hotmail.com
 password = Test1234
 default_timeout = 15
 
-newemail = faizan
-newdomain = @yahoo.com

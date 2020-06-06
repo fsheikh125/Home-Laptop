@@ -1,1 +1,5 @@
-﻿newemail = faizan125@yahoo.com
+﻿newemail = faizan
+newdomain = @yahoo.com
+fname=Faizan
+lname = Sheikh
+city = Dewsbury
