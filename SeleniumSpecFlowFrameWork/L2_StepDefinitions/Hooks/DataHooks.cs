@@ -14,6 +14,7 @@ namespace SeleniumSpecFlowFrameWork.L2_StepDefinitions.Hooks
     public class DataHooks
     {
         public static Dictionary<string, string> EnvData;
+        public static Dictionary<string, string> UserData;
 
         [BeforeTestRun]
         public static void LoadEnironmentData()
@@ -22,12 +23,10 @@ namespace SeleniumSpecFlowFrameWork.L2_StepDefinitions.Hooks
             string fname = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/../../Environment/TestStaging.txt";
             EnvData = Utils.LoadData(fname);
 
-        }           
-
-    }
-   /* public class UserHooks
-    {
-        public static Dictionary<string, string> UserData;
+        }
+      
+    
+        
 
 
         [BeforeScenario("@john")]
@@ -36,5 +35,7 @@ namespace SeleniumSpecFlowFrameWork.L2_StepDefinitions.Hooks
             string fname = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/../../Data/newreguser.txt";
             UserData = Utils.LoadData(fname);
         }
-    }*/
-}
+    }
+
+    }
+

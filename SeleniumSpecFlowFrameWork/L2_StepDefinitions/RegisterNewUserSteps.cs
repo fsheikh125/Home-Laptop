@@ -2,6 +2,7 @@
 using SeleniumSpecFlowFrameWork.Global;
 using SeleniumSpecFlowFrameWork.L2_StepDefinitions.Hooks;
 using SeleniumSpecFlowFrameWork.L3_SeleniumCode;
+using SeleniumSpecFlowFrameWork.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,12 +26,13 @@ namespace SeleniumSpecFlowFrameWork.L2_StepDefinitions
         [Given(@"The user provides email ID to create an account")]
         public void GivenTheUserProvidesEmailIDToCreateAnAccount()
         {
-            string emailadd = DataHooks.EnvData["newemail"];
-            string domain = DataHooks.EnvData["newdomain"];
+            string email = DataHooks.UserData["newemail"];
+            string domain = DataHooks.UserData["newdomain"];
+            string emailadd = email + Utils.GetRandomNumber(1000, 9999) + domain;
 
 
             RegisterNewUser registerNewUser = new RegisterNewUser(sso);
-            registerNewUser.RegisterAccount(emailadd, domain);
+            registerNewUser.RegisterAccount(emailadd);
             
         }
 

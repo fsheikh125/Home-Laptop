@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 
 namespace SeleniumSpecFlowFrameWork.L2_StepDefinitions
-{
+{ 
+
+    [Binding]
     class SearchPageSteps
     {
         ShareStateObjects sso;
@@ -24,12 +26,10 @@ namespace SeleniumSpecFlowFrameWork.L2_StepDefinitions
         [When(@"The user searches for (.*)")]
         public void WhenTheUserSearchesFor(string p0)
         {
-            ScenarioContext.Current.Pending();
+        SearchPage searchPage = new SearchPage(sso);
+        searchPage.SearchDress(p0);
+
         }
-
-
-
-
 
 
     }
