@@ -19,13 +19,13 @@ namespace SeleniumSpecFlowFrameWork.L2_StepDefinitions
             sso = _sso;
         }
 
-        [When(@"The user searches for Printed Summer Dress")]
-        public void WhenTheUserSearchesForPrintedSummerDress(string p0)
-        {
-            SearchPage searchPage = new SearchPage(sso);
-            searchPage.SearchDress(p0);
-        }
+      
 
+        [When(@"The user searches for (.*)")]
+        public void WhenTheUserSearchesFor(string p0)
+        {
+            ScenarioContext.Current.Pending();
+        }
 
 
 

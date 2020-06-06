@@ -77,17 +77,12 @@ namespace SeleniumSpecFlowFrameWork.L1_Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Search a Product")]
         [NUnit.Framework.CategoryAttribute("search")]
-        [NUnit.Framework.TestCaseAttribute("Printed Summer Dress", null)]
-        public virtual void SearchAProduct(string product, string[] exampleTags)
+        public virtual void SearchAProduct()
         {
-            string[] @__tags = new string[] {
+            string[] tagsOfScenario = new string[] {
                     "search"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search a Product", null, @__tags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search a Product", null, new string[] {
+                        "search"});
 #line 7
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -112,10 +107,16 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("The user navigates to home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 9
- testRunner.When(string.Format("The user searches for {0}", product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("The user searches for <product>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "product"});
+                table2.AddRow(new string[] {
+                            "Printed Summer Dress"});
+                table2.AddRow(new string[] {
+                            "Summer Dress"});
 #line 10
- testRunner.Then(string.Format("The user should be able to see all results with {0}", product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("The user should be able to see all results with <product>", ((string)(null)), table2, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
