@@ -12,21 +12,20 @@ using TechTalk.SpecFlow;
 namespace SeleniumSpecFlowFrameWork.L3_SeleniumCode
 {
     
-    class RegisterNewUser
+    class RegisterNewUserPage
     {
         By RegEmail_txt = By.Id("email_create");
         By RegSubmit_btn = By.Id("SubmitCreate");
         By homeIcon_logo = By.XPath("//i[@class='icon-home']");
         ShareStateObjects sso;
 
-        public RegisterNewUser(ShareStateObjects _sso)
+        public RegisterNewUserPage(ShareStateObjects _sso)
         {
             this.sso = _sso;
         }
 
         public void RegisterAccount(string emailadd)
-        {
-  
+        {  
             sso.driver.FindElement(RegEmail_txt).SendKeys(emailadd );
             sso.driver.FindElement(RegSubmit_btn).Click();
         }
@@ -76,8 +75,7 @@ namespace SeleniumSpecFlowFrameWork.L3_SeleniumCode
         {
             var homeIcon = sso.driver.FindElement(homeIcon_logo).Displayed;
             return homeIcon;
-//this is test branch
-//changes for faisal
+            //this is test branch
         }
 
     }
