@@ -40,7 +40,6 @@ namespace SeleniumSpecFlowFrameWork.L3_SeleniumCode
 
         public bool IsErrorMessageDisplayed()
         {
-
             var messageDisplayed = sso.driver.FindElement(errorMessage_txt).Displayed;
             return messageDisplayed;
         }

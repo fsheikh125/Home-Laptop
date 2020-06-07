@@ -31,7 +31,7 @@ namespace SeleniumSpecFlowFrameWork.L2_StepDefinitions
             string emailadd = email + Utils.GetRandomNumber(1000, 9999) + domain;
 
 
-            RegisterNewUser registerNewUser = new RegisterNewUser(sso);
+            RegisterNewUserPage registerNewUser = new RegisterNewUserPage(sso);
             registerNewUser.RegisterAccount(emailadd);
             
         }
@@ -39,14 +39,14 @@ namespace SeleniumSpecFlowFrameWork.L2_StepDefinitions
         [When(@"The user provides the required information and submits for registration")]
         public void WhenTheUserProvidesTheRequiredInformationAndSubmitsForRegistration()
         {
-            RegisterNewUser registerNewUser = new RegisterNewUser(sso);
+            RegisterNewUserPage registerNewUser = new RegisterNewUserPage(sso);
             registerNewUser.FillAccountDetails();
         }
 
         [Then(@"The user should be able to register successfully")]
         public void ThenTheUserShouldBeAbleToRegisterSuccessfully()
         {
-            RegisterNewUser registerNewUser = new RegisterNewUser(sso);
+            RegisterNewUserPage registerNewUser = new RegisterNewUserPage(sso);
             registerNewUser.CreateAccount();
             Assert.IsTrue(registerNewUser.IsAccountCreated());
         }
