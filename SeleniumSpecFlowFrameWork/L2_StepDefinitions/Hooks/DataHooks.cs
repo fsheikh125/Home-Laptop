@@ -23,8 +23,7 @@ namespace SeleniumSpecFlowFrameWork.L2_StepDefinitions.Hooks
             string fname = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/../../Environment/TestStaging.txt";
             EnvData = Utils.LoadData(fname);
 
-        }
-      
+        }   
     
         
 
