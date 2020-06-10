@@ -22,12 +22,9 @@ namespace SeleniumSpecFlowFrameWork.L2_StepDefinitions.Hooks
            // string fpath = @"C:\Users\ABRAKH\source\repos\TrainingProject\SeleniumSpecFlowFrameWork\Environment\TestStaging.txt";
             string fname = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/../../Environment/TestStaging.txt";
             EnvData = Utils.LoadData(fname);
-
-        }   
+        }  
     
         
-
-
         [BeforeScenario("@john")]
         public static void LoadNewUSerData()
         {

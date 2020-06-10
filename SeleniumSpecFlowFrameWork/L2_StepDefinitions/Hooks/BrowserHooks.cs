@@ -14,18 +14,15 @@ namespace SeleniumSpecFlowFrameWork.L2_StepDefinitions.Hooks
 {
     [Binding]
     public class BrowserHooks
-    {
-        
+    {       
         ShareStateObjects sso;
 
         public BrowserHooks (ShareStateObjects _sso)
         {
             this.sso = _sso;
-
         }
 
-
-
+        
         [BeforeScenario]
         public void SetUp ()
         {
@@ -36,7 +33,6 @@ namespace SeleniumSpecFlowFrameWork.L2_StepDefinitions.Hooks
             int timespan = Int32.Parse(DataHooks.EnvData["default_timeout"]);
             sso.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(timespan);
             sso.driver.Manage().Window.Maximize();
-
         }
 
        /* [AfterScenario]

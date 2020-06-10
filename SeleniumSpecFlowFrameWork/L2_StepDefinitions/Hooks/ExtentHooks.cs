@@ -16,7 +16,6 @@ namespace SeleniumSpecFlowFrameWork.L2_StepDefinitions.Hooks
     [Binding]
     public class ExtentHooks
     {
-
         [ThreadStatic]
         private static ExtentTest featureName;
         private ExtentTest scenario;
@@ -62,19 +61,16 @@ namespace SeleniumSpecFlowFrameWork.L2_StepDefinitions.Hooks
 
             scenario = featureName.CreateNode<Scenario>(scenarioContext.ScenarioInfo.Title);
             //scenario =ExtentTestManager.GetTest().CreateNode<Scenario>(_scenarioContext.ScenarioInfo.Title);
-
-
         }
+
         [AfterStep]
         public void LogSteps()
         {
             string gherkinKeyWord = scenarioContext.StepContext.StepInfo.StepDefinitionType.ToString();
             string gherkinStep = scenarioContext.StepContext.StepInfo.Text;
 
-
             switch (scenarioContext.ScenarioExecutionStatus)
             {
-
                 case ScenarioExecutionStatus.OK:
                     scenario.CreateNode<Given>("<i>" + gherkinKeyWord + "</i>" + "  " + gherkinStep);
                     break;
@@ -88,23 +84,15 @@ namespace SeleniumSpecFlowFrameWork.L2_StepDefinitions.Hooks
                 case ScenarioExecutionStatus.StepDefinitionPending:
                     scenario.CreateNode<Given>("<i>" + gherkinKeyWord + "</i>" + "  " + gherkinStep).Warning("<i><font color=\"orange\"> Step Definition Pending</font></i>");
                     break;
-
-
             }
-
-
-
         }
 
         [AfterTestRun]
         protected static void TearDown()
         {
-
             extent.AddSystemInfo("OS", "Win 10"); // hard coded at the moment; can fetch dynamically.
             extent.AddSystemInfo("Browser", "Chrome 83");
             extent.Flush();
-
-
         }
     }
 }
