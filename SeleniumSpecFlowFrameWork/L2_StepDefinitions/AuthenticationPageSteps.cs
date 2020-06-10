@@ -19,7 +19,6 @@ namespace SeleniumSpecFlowFrameWork.L2_StepDefinitions
         public AuthenticationPageSteps(ShareStateObjects _sso)
         {
             this.sso = _sso;
-
         }
 
 
@@ -30,7 +29,6 @@ namespace SeleniumSpecFlowFrameWork.L2_StepDefinitions
             string pword = DataHooks.EnvData["password"];
             AuthenticationPage authenticationPage = new AuthenticationPage(sso);
             authenticationPage.Login(uname, pword);
-
         }
 
 
@@ -46,9 +44,7 @@ namespace SeleniumSpecFlowFrameWork.L2_StepDefinitions
         public void ThenIShouldGetAnAuthenticationFailedError()
         {
             Assert.IsTrue(new AuthenticationPage(sso).IsErrorMessageDisplayed());
-
         }
-
 
     }
 }
