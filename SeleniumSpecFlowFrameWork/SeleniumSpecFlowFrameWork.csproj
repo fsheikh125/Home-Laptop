@@ -166,6 +166,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global\ShareStateObjects.cs" />
+    <Compile Include="L2_StepDefinitions\AddProductToCartSteps.cs" />
     <Compile Include="L2_StepDefinitions\AuthenticationPageSteps.cs" />
     <Compile Include="L2_StepDefinitions\Hooks\ExtentHooks.cs" />
     <Compile Include="L2_StepDefinitions\RegisterNewUserSteps.cs" />

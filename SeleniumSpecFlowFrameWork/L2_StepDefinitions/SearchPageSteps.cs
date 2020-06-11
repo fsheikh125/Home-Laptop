@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using SeleniumSpecFlowFrameWork.Global;
 using SeleniumSpecFlowFrameWork.L3_SeleniumCode;
 using System;
@@ -28,9 +29,16 @@ namespace SeleniumSpecFlowFrameWork.L2_StepDefinitions
         {
         SearchPage searchPage = new SearchPage(sso);
         searchPage.SearchDress(p0);
-
         }
 
-
+        [Then(@"The user should be able to see all results with (.*)")]
+        public void ThenTheUserShouldBeAbleToSeeAllResultsWith(string p0)
+        {
+            Assert.IsTrue(new SearchPage(sso).IsErrorMessageDisplayed());            
+        }
     }
+
+
+
+    
 }

@@ -50,7 +50,6 @@ namespace SeleniumSpecFlowFrameWork.L2_StepDefinitions.Hooks
         [BeforeFeature]
         public static void Setup(FeatureContext featureContext)
         {
-
             //featureName=ExtentService.Instance.CreateTest<Feature>(featureContext.FeatureInfo.Title);
             featureName = extent.CreateTest<Feature>(featureContext.FeatureInfo.Title);
         }
@@ -58,7 +57,6 @@ namespace SeleniumSpecFlowFrameWork.L2_StepDefinitions.Hooks
         [BeforeScenario]
         public void Beforescenario()
         {
-
             scenario = featureName.CreateNode<Scenario>(scenarioContext.ScenarioInfo.Title);
             //scenario =ExtentTestManager.GetTest().CreateNode<Scenario>(_scenarioContext.ScenarioInfo.Title);
         }
