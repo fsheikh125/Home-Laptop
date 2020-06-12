@@ -169,6 +169,7 @@
     <Compile Include="L2_StepDefinitions\AddProductToCartSteps.cs" />
     <Compile Include="L2_StepDefinitions\AuthenticationPageSteps.cs" />
     <Compile Include="L2_StepDefinitions\Hooks\ExtentHooks.cs" />
+    <Compile Include="L2_StepDefinitions\PlaceanOrderSteps.cs" />
     <Compile Include="L2_StepDefinitions\RegisterNewUserSteps.cs" />
     <Compile Include="L2_StepDefinitions\CommonPageSteps.cs" />
     <Compile Include="L2_StepDefinitions\Hooks\BrowserHooks.cs" />
