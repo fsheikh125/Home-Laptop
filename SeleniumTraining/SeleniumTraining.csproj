@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assignment\Class1.cs" />
     <Compile Include="Basics\E01_BrowserWindow.cs" />
     <Compile Include="Basics\E02_BrowserPage.cs" />
     <Compile Include="Basics\E03_Actions.cs" />
