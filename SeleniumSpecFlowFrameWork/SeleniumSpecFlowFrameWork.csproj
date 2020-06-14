@@ -176,6 +176,7 @@
     <Compile Include="L2_StepDefinitions\Hooks\DataHooks.cs" />
     <Compile Include="L2_StepDefinitions\MyAccountPageSteps.cs" />
     <Compile Include="L2_StepDefinitions\SearchPageSteps.cs" />
+    <Compile Include="L3_SeleniumCode\AddProducttoCartPage.cs" />
     <Compile Include="L3_SeleniumCode\AuthenticationPage.cs" />
     <Compile Include="L3_SeleniumCode\CommonPage.cs" />
     <Compile Include="L3_SeleniumCode\MyAccountPage.cs" />

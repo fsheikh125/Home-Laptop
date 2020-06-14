@@ -78,14 +78,8 @@ namespace SeleniumSpecFlowFrameWork.L1_Features
         {
 #line 6
 #line hidden
-#line 7
-testRunner.Given("I navigate to the authentication page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 8
- testRunner.When("I provide valid credentials and submit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 9
- testRunner.Then("I should be on my accounts page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 10
+ testRunner.Given("The user should  be logged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
         
