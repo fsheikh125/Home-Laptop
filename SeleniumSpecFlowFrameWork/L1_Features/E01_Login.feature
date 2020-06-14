@@ -15,3 +15,4 @@ Scenario: InValid LogIn
 	Given I navigate to the authentication page
 	When I provide invalid credentials and submit
 	Then I should get an authentication failed error
+

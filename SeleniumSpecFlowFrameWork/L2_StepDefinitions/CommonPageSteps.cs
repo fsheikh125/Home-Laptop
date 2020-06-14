@@ -35,5 +35,16 @@ namespace SeleniumSpecFlowFrameWork.L2_StepDefinitions
             new CommonPage(sso).NavigateTo(DataHooks.EnvData["baseurl"]);
         }
 
+        [Given(@"The user should  be logged in")]
+        public void GivenTheUserShouldBeLoggedIn()
+        {
+            new CommonPage(sso).NavigateTo(DataHooks.EnvData["baseurl"] + "/index.php?controller=authentication&back=my-account");
+            string uname = DataHooks.EnvData["username"];
+            string pword = DataHooks.EnvData["password"];
+            AuthenticationPage authenticationPage = new AuthenticationPage(sso);
+            authenticationPage.Login(uname, pword);
+        }
+
+
     }
 }

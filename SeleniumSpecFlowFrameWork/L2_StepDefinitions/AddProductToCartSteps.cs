@@ -1,35 +1,23 @@
 ﻿using SeleniumSpecFlowFrameWork.Global;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SeleniumSpecFlowFrameWork.L3_SeleniumCode;
 using TechTalk.SpecFlow;
 
 namespace SeleniumSpecFlowFrameWork.L2_StepDefinitions
 {
     [Binding]
-       
-
-    class AddProductToCartSteps
+    class AddProducttoCartSteps
     {
         ShareStateObjects sso;
-        public AddProductToCartSteps(ShareStateObjects _sso)
+        public AddProducttoCartSteps(ShareStateObjects _sso)
         {
             sso = _sso;
         }
 
-
         [Given(@"The user adds (.*) from the popular section")]
-        public void GivenTheUserAddsBlouseFromThePopularSection(string p0)
+        public void GivenTheUserAddsBlouseFromThePopularSection(string dressName)
         {
-            ScenarioContext.Current.Pending();
+            new AddProducttoCartPage(sso).SelectDress(dressName);
         }
-
-
-
-
 
     }
 }

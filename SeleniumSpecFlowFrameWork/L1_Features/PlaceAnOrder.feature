@@ -4,10 +4,10 @@
 	I want to be told the sum of two numbers
 
 Background: 
-Given I navigate to the authentication page
-	When I provide valid credentials and submit
-	Then I should be on my accounts page
-
+#	#Given I navigate to the authentication page
+#	When I provide valid credentials and submit
+#	Then I should be on my accounts page
+	Given The user should  be logged in
 
 @order @placeorder
 Scenario: Place an Order
